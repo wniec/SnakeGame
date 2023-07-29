@@ -1,5 +1,5 @@
 enum Direction:
-  case Up, Down, Left, Right
+  case Up, Right, Down, Left
 
 
     def to_vec: (Int, Int) = {
@@ -10,9 +10,6 @@ enum Direction:
         case Right => (0, 1)
       }
     }
-  def horizontal: Boolean = {
-    this match {
-      case Up | Down => false
-      case Left | Right => true
-    }
-  }
+
+  def next: Direction = Direction.fromOrdinal((this.ordinal+1)%4)
+  def prev: Direction = Direction.fromOrdinal((this.ordinal+3)%4)
