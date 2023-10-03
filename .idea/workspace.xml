@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107a2fb7-25e9-47ed-916c-bcc76368b7db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/SnakeColor.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/App.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/App.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Apple.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Apple.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Board.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Board.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Direction.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Direction.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Snake.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Snake.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SnakeColor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SnakeColor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +100,17 @@
       <updated>1690437620784</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

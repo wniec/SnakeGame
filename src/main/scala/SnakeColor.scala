@@ -8,7 +8,7 @@ enum SnakeColor:
     this match {
       case Green => scalafx.scene.paint.Color.Green
       case Purple => scalafx.scene.paint.Color.Purple
-      case Orange => scalafx.scene.paint.Color.Orange
+      case Orange => scalafx.scene.paint.Color(1.0,0.5,0,1.0)
       case Blue => scalafx.scene.paint.Color.Blue
     }
   }

@@ -15,14 +15,10 @@
     -fx-padding: 10px;
 }
 .grid-pane{
-    -fx-border-style:  solid;
-    -fx-background-color: rgba(70,0,70,1.0) ;
-    -fx-background-color: rgba(70,100,70,1.0) ;
-    -fx-border-width: 5 ;
-    -fx-font-family: "Impact";
-    -fx-font-size: 48;
+    -fx-color: rgba(70,0,70,1.0) ;
     -fx-alignment: center;
-    -fx-text-fill: #7f7f7f;
+    -fx-border-width: 10;
+    -fx-border-color: #7f7f7f ;
 }
 .button-box{
     -fx-background-color: rgba(0,0,0,0.0) ;
@@ -30,14 +26,14 @@
     -fx-alignment: center;
 }
 .background{
-    -fx-background-color: rgba(0,90,60,1.0) ;
+    -fx-background-color: rgba(0,100,45,1.0) ;
     -fx-alignment: center;
-}
-.highlighted-tile{
-    -fx-fill: rgba(60,140,100,1.0) ;
-    -fx-background-color: rgba(60,140,100,1.0) ;
 }
 .tile{
     -fx-fill: rgba(0,90,60,1.0) ;
     -fx-background-color: rgba(0,90,60,1.0) ;
+}
+.map-box{
+    -fx-background-color: rgba(100,0,0,1.0) ;
+    -fx-alignment: center;
 }

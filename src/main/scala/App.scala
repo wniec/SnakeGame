@@ -1,6 +1,7 @@
 import javafx.css.Stylesheet
 import javafx.event.Event
 import javafx.scene.input.MouseEvent
+import javafx.scene.layout.StackPane
 import scalafx.Includes.when
 import scalafx.scene.image.{Image, ImageView}
 import scalafx.application.{JFXApp3, Platform}
@@ -31,16 +32,21 @@ object App extends JFXApp3 {
   private var winnerSnake: Option[Snake] = None
   private def h_unit: Int = h / size
   private def w_unit: Int = w / size
-  private def square(color: Color=Color.color(1,0.5,1)) =new Rectangle{
+  private def square(color: Color=Color.color(1,0.5,1,0.0)) =new Rectangle{
     fill = color
     width = w_unit
     height = h_unit
   }
   private def drawApple= {
-    new Circle {
+    val tile = square()
+    val stackPane: StackPane = new StackPane()
+    stackPane.getChildren.add(tile)
+    val apple = new Circle {
       fill = Red
       radius = h_unit / 2
     }
+    stackPane.getChildren.add(apple)
+    stackPane
   }
   private def drawSnake(snake: Snake)={
     val color = snake.color.get_paint
@@ -56,8 +62,8 @@ object App extends JFXApp3 {
     (0 until size).foreach((_: Int) => {
       val rc = new RowConstraints()
       val cc = new ColumnConstraints()
-      cc.setPrefWidth(w_unit)
-      rc.setPrefHeight(h_unit)
+      cc.setMaxWidth(w_unit)
+      rc.setMaxHeight(h_unit)
       gridPane.getRowConstraints.add(rc)
       gridPane.getColumnConstraints.add(cc)
     })
@@ -74,11 +80,15 @@ object App extends JFXApp3 {
         gridPane.add(tile, xs, ys)
       }
     }
-    gridPane.setAlignment(Pos.Center)
+
     gridPane.styleClass = List("grid-pane")
-    gridPane.setBackground(Background.fill(Purple))
-    gridPane.setGridLinesVisible(true)
-    gridPane
+    gridPane.setMaxWidth(w)
+    gridPane.setMaxHeight(h)
+    val vbox: VBox = new VBox{
+      children = Seq(gridPane)
+    }
+    vbox.styleClass = List("map-box")
+    vbox
   }
   private def update(): Unit = {
     board.snakes.foreach((s: Snake) => board.move(s))
@@ -114,8 +124,10 @@ object App extends JFXApp3 {
       text = "no one won"
     }
     val label: Label = new Label(text)
+    label.setFont(Font.font("Impact", 96.0))
     label.setTextFill(textColor)
     val box = new HBox(){
+      alignment = Pos.Center
       children = Seq(label)
       background = Background.fill(color)
     }
@@ -140,6 +152,7 @@ object App extends JFXApp3 {
   }
   private def start_button_box ={
     val box = new VBox(10.0,start_button,quit_button)
+    box.styleClass = List("button-box")
     box
   }
 
@@ -167,7 +180,6 @@ object App extends JFXApp3 {
         root = new VBox{
           styleClass = List("background")
           children = Seq(start_button_box)
-          alignment = Pos.Center
         }
       }
     }

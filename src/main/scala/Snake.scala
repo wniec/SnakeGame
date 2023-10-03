@@ -2,6 +2,7 @@ import scalafx.scene.paint.Color
 
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
+import scala.util.Random
 
 class Snake(val color: SnakeColor){
   var body = new mutable.HashSet[(Int,Int)]()
@@ -31,11 +32,19 @@ class Snake(val color: SnakeColor){
   }
 }
 object Snake{
-  def apply(position:(Int,Int),direction: Direction,color:SnakeColor):Snake={
+  def apply(map_size:Int,color:SnakeColor):Snake={
+    val rand = new Random()
     val snake = new Snake(color)
+    val range = color match{
+      case SnakeColor.Green => (map_size/2,0)
+      case SnakeColor.Blue => (0,map_size/2)
+      case SnakeColor.Purple => (map_size/2,map_size/2)
+      case SnakeColor.Orange => (0,0)
+    }
+    val position = (rand.nextInt(map_size/2)+range._1,rand.nextInt(map_size/2)+range._2)
     snake.body.addOne(position)
     snake.bodyArray.addOne(position)
-    snake.direction = direction
+    snake.direction = Direction.fromOrdinal(rand.nextInt(4))
     snake
   }
 }
